@@ -1,103 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Survey Form</title>
 </head>
-
 <body>
   <h1>Survey Form</h1>
-<p>Let us know what you thought of our cooking workshop on 'Sri Lankan Food Made Simple'</description>
-
-<div>
-  <label id="name-label" for="name">Name:</label>
+    <p>Let us know what you thought of our cooking workshop on 'Sri Lankan Food Made Simple'</p>
+    <p>Fields marked with an asterisk(*) <u>must</u> be completed.
+  <div class="wrapper">
+    <form action="/url-where-you-want-to-submit-form-data"></form>
+  <div class="name odd-no">
+    <label for="name-label"><b>*Name:</b></label><br>
+    <input class="box" type="text" name="name" placeholder="Enter your name here.">
+  </div>
+  <div class="age even-no">
+    <label for="age-label"><b>Age:</b></label><br>
+    <select>
+      <option value="12-18">11 to 18</option>
+      <option value="19-25">19 to 25</option>
+      <option value="26-40">26 to 40</option>
+      <option value="41-55">41 to 55</option>
+      <option value="over55">Over 55</option>    
+    </select>
+  </div>
+  <div class="gender odd-no">
+  <label for="gender-label"><b>Gender:</b></label><br>
+    <input type="radio" name="gender" value="male">Male
+    <input type="radio" name="gender" value="female">Female<br>
+  </div>
+  <div class="email even-no">
+    <label for="email-label"><b>*Email:</b></label><br>
+    <input class= "box" type="email" name ="email" placeholder="Enter your email here.">
+  </div>
+  <div class="phone odd-no">
+    <label for="phone-label"><b>Mobile number:</b></label><br>
+    <input class="box" type="number" name="phone" placeholder="Enter your mobile" max="8">
+  </div>
+  <div class="overall even-no">
+    <label for="overall-label"><b>*What is your overall rating of this course?</b></label><br>
+    <input type="radio" name="overall" value="best">I enjoyed it very much.<br>
+    <input type="radio" name="overall" value="nextbest">I liked parts of the workshop.<br>
+    <input type="radio" name="overall" value="neutral">I neither liked nor disliked the workshop.<br>
+    <input type="radio" name="overall" value="dislike">I did not enjoy this workshop.<br>
+  </div>
+  <div class="best odd-no">
+    <label for="best-label"><b>*What did you like most about the course? Please mark ALL that are appropriate:</b></label><br>
+    <input type="checkbox" name="bestparts" value="format">Class format<br>
+    <input type="checkbox" name="bestparts" value="narrative">Narrative on Sri Lankan food and cooking<br>
+    <input type="checkbox" name="bestparts" value="process">The cooking process<br>
+    <input type="checkbox" name="bestparts" value="tasting">Tasting the dishes<br>
+    <input type="checkbox" name="bestparts" value="none">None of the above
+  </div>
+  <div class="comments even-no">
+    <label for="comments-label"><b>Do you have any suggestions on how to improve the course:</b></label><br>
+    <textarea name="comments" placeholder="Enter your comments here."></textarea>
+  </div>
+  <div class="previous odd-no">
+    <label for="previouscourse-label"><b>Have you attended our workshops prior to this one:</b></label><br>
+    <input type="radio" name="previouscourse" value="yes">Yes
+    <input type="radio" name="previouscourse" value="no">No
+  </div>
+  <div class="recommendation even-no">
+    <label for="recommendation-label"><b>Would you recommend a friend/relative to participate in our workshops:</b></label><br>
+    <input type="radio" name="recommendation" value="yes">Yes<br>
+    <input type="radio" name="recommendation" value="no">No<br>
+    <input type="radio" name="recommendation" value="no">Maybe<br><br>
+    <button type="submit">Submit</button>
+  </div>
 </div>
-<div>
-  <input type="text" placeholder="Enter your name here.">
-</div>
-
-<div>
-  <label id="age">Age:</label>
-</div>
-<div>
-  <select>
-    <option value="12-18">11 to 18</option>
-    <option value="19-25">19 to 25</option>
-    <option value="26-40">26 to 40</option>
-    <option value="41-55">41 to 55</option>
-    <option value="over55">Over 55</option>    
-  </select>
-</div>
-
-<div>
-  <label>Gender:</label>
-</div>
-<div>
-  <input type="radio" value="male">Male<br>
-   <input type="radio" value="female">Female<br>
-</div>
-
-<div>
-  <label id="email-label" for="email">Email:</label>
-</div>
-<div>
-  <input type="email" placeholder="Enter your email here.">
-</div>
-
-<div>
-  <label id="phone">Mobile number:</label>
-</div>
-<div>
-  <input type="number" placeholder="Enter your mobile" max="8">
-</div>
-
-<div>
-  <label id="referral">What is your overall rating of this course? Please tick ONE of the following:</label>
-</div>
-<div>
-  <input type="checkbox" value="very-likely">I enjoyed it very much.<br>
-  <input type="checkbox" value="likely">I liked parts of the workshop.<br>
-  <input type="checkbox" value="neither">I neither liked nor disliked the workshop.<br>
-  <input type="checkbox" value="unlikely">I did not enjoy this workshop.<br>
-</div>
-    
-<div>
-  <label id="best">What did you like most about the course? Please mark ALL that are appropriate:</label>
-</div>
-<div>
-  <input type="checkbox" value="format">Class format<br>
-  <input type="checkbox" value="description">Narrative on Sri Lankan food and cooking<br>
-  <input type="checkbox" value="process">The cooking process<br>
-  <input type="checkbox" value="tasting">Tasting the dishes<br>
-  <input type="checkbox" value="none">None of the above<br>
-</div>
-
-<div>
-  <label>Do you have any suggestions on how to improve the course:</label>
-</div>
-<div>
-  <textarea placeholder="Enter your comments here."></textarea>
-</div>
-
-<div>
-  <label>Have you attended our workshops prior to this one:</label>
-</div>
-<div>
-  <input type="radio" value="yes">Yes<br>
-   <input type="radio" value="no">No<br>
-</div>
-
-<div>
-  <label>Would you recommend a friend/relative to participate in our workshops:</label>
-</div>
-<div>
-  <input type="radio" value="yes">Yes<br>
-  <input type="radio" value="no">No<br>
-   <input type="radio" value="no">Maybe<br>
-</div>
-
-<button id="submit" type="submit">Submit</button>
-<p>Thank you for participating in our workshop!</p>
-
+  <p>Thank you for participating in our workshop!</p>
 </body>
 </html>
 

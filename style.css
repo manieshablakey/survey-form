@@ -1,0 +1,60 @@
+body {
+	text-align: center;
+	background-color: #cce6ff;
+}
+
+h1 {
+	font-family: 'KoHo', sans-serif;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+p {
+	font-size: 18px;
+}
+
+.wrapper {
+	font-family: 'KoHo', sans-serif;
+	height: 80%;
+	width: 70%;
+	margin: 0 auto;
+	border: 2px solid #4da6ff;
+	border-radius: 5px;
+	background-color: #e6f2ff;
+	z-index: 2;
+	overflow: auto;
+}
+
+.even-no {
+	text-align: left;
+	padding: 10px 50px;
+	/*background-color: #e6ffe6;*/
+}
+
+.odd-no {
+	text-align: left;
+	padding: 10px 50px;
+	/*background-color: #ccffcc;*/
+}
+
+.box {
+	height: 20px;
+	width: 250px;
+}
+
+.comments textarea{
+	height: 100px;
+	width: 400px;
+}
+
+button {
+	height: 40px;
+	width: 100px;
+	border: 2px solid #4da6ff;
+	border-radius: 5px;
+}
+
+button:hover {
+	background-color: #4da6ff;
+	color: white;
+}

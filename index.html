@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=KoHo" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style.css">
   <title>Survey Form</title>
 </head>
 <body>
-  <h1>Survey Form</h1>
-    <p>Let us know what you thought of our cooking workshop on 'Sri Lankan Food Made Simple'</p>
-    <p>Fields marked with an asterisk(*) <u>must</u> be completed.
+  <h1 id="title">Survey Form</h1>
+    <p id="description">We'd love to hear what you thought of our 'Sri Lankan Food Made Simple' cooking workshop!</p>
   <div class="wrapper">
-    <form action="/url-where-you-want-to-submit-form-data"></form>
-  <div class="name odd-no">
-    <label for="name-label"><b>*Name:</b></label><br>
-    <input class="box" type="text" name="name" placeholder="Enter your name here.">
+    <form id="survey-form" action="/url-where-you-want-to-submit-form-data"></form>
+  <div class="odd-no">
+    <label for="name-label" id="name-label"><b>Name:</b></label><br>
+    <input class="box" type="text" name="name" placeholder="Enter your name here." id="name">
   </div>
-  <div class="age even-no">
-    <label for="age-label"><b>Age:</b></label><br>
-    <select>
+  <div class="even-no">
+    <label for="age-label" id="age-label"><b>Age:</b></label><br>
+    <select id="dropdown">
       <option value="12-18">11 to 18</option>
       <option value="19-25">19 to 25</option>
       <option value="26-40">26 to 40</option>
@@ -25,49 +25,49 @@
       <option value="over55">Over 55</option>    
     </select>
   </div>
-  <div class="gender odd-no">
-  <label for="gender-label"><b>Gender:</b></label><br>
+  <div class="odd-no">
+  <label for="gender-label" id="gender-label"><b>Gender:</b></label><br>
     <input type="radio" name="gender" value="male">Male
     <input type="radio" name="gender" value="female">Female<br>
   </div>
-  <div class="email even-no">
-    <label for="email-label"><b>*Email:</b></label><br>
-    <input class= "box" type="email" name ="email" placeholder="Enter your email here.">
+  <div class="even-no">
+    <label for="email-label" id="email-label"><b>*Email:</b></label><br>
+    <input class= "box" type="email" name ="email" required placeholder="Enter a valid email address here." id="email">
   </div>
-  <div class="phone odd-no">
-    <label for="phone-label"><b>Mobile number:</b></label><br>
-    <input class="box" type="number" name="phone" placeholder="Enter your mobile" max="8">
+  <div class="odd-no">
+    <label for="phone-label" id="number-label"><b>Mobile number:</b></label><br>
+    <input class="box" type="number" name="phone" placeholder="Enter an 8 digit mobile number" min="8" max="8" id="number">
   </div>
-  <div class="overall even-no">
-    <label for="overall-label"><b>*What is your overall rating of this course?</b></label><br>
+  <div class="even-no">
+    <label for="overall-label" id="overall-label"><b>What is your overall rating of this course?</b></label><br>
     <input type="radio" name="overall" value="best">I enjoyed it very much.<br>
     <input type="radio" name="overall" value="nextbest">I liked parts of the workshop.<br>
     <input type="radio" name="overall" value="neutral">I neither liked nor disliked the workshop.<br>
     <input type="radio" name="overall" value="dislike">I did not enjoy this workshop.<br>
   </div>
-  <div class="best odd-no">
-    <label for="best-label"><b>*What did you like most about the course? Please mark ALL that are appropriate:</b></label><br>
+  <div class="odd-no">
+    <label for="best-label" id="best-label"><b>What did you like most about the course? Please mark ALL that are appropriate:</b></label><br>
     <input type="checkbox" name="bestparts" value="format">Class format<br>
     <input type="checkbox" name="bestparts" value="narrative">Narrative on Sri Lankan food and cooking<br>
     <input type="checkbox" name="bestparts" value="process">The cooking process<br>
     <input type="checkbox" name="bestparts" value="tasting">Tasting the dishes<br>
     <input type="checkbox" name="bestparts" value="none">None of the above
   </div>
-  <div class="comments even-no">
-    <label for="comments-label"><b>Do you have any suggestions on how to improve the course:</b></label><br>
-    <textarea name="comments" placeholder="Enter your comments here."></textarea>
+  <div class="even-no">
+    <label for="comments-label" id="comments-label"><b>Do you have any suggestions on how to improve the course:</b></label><br>
+    <textarea name="comments" placeholder="Enter your comments here." id="comments"></textarea>
   </div>
-  <div class="previous odd-no">
-    <label for="previouscourse-label"><b>Have you attended our workshops prior to this one:</b></label><br>
+  <div class="odd-no">
+    <label for="previouscourse-label" id="previous-label"><b>Have you attended our workshops prior to this one:</b></label><br>
     <input type="radio" name="previouscourse" value="yes">Yes
     <input type="radio" name="previouscourse" value="no">No
   </div>
-  <div class="recommendation even-no">
-    <label for="recommendation-label"><b>Would you recommend a friend/relative to participate in our workshops:</b></label><br>
+  <div class="even-no">
+    <label for="recommendation-label" id="recommendation-label"><b>Would you recommend a friend/relative to participate in our workshops:</b></label><br>
     <input type="radio" name="recommendation" value="yes">Yes<br>
     <input type="radio" name="recommendation" value="no">No<br>
     <input type="radio" name="recommendation" value="no">Maybe<br><br>
-    <button type="submit">Submit</button>
+    <button type="submit" id="submit">Submit</button>
   </div>
 </div>
   <p>Thank you for participating in our workshop!</p>
